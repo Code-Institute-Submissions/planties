@@ -102,6 +102,15 @@ i.fas.fa-shopping-bag.fa-lg{
 	z-index: -1;
 }
 
+.border-dark {
+    border-color: #718a66!important;
+}
+
+a.category-badge > span.badge:hover {
+    background: #718a66 !important;
+    color: #fff !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
