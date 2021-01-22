@@ -1,0 +1,58 @@
+[
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "live_plants",
+      "friendly_name": "Live Plants"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "pots",
+      "friendly_name": "Pots"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "wedding_bouquets",
+      "friendly_name": "Wedding Bouquets"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "valentines_day",
+      "friendly_name": "Valentines Day"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "artificial_plants",
+      "friendly_name": "Artificial Plants"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "decorations",
+      "friendly_name": "Decorations"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "christmas",
+      "friendly_name": "Christmas"
+    }
+  }
+]
