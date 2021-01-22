@@ -88,6 +88,10 @@ i.fas.fa-shopping-bag.fa-lg{
     border: 1px solid #718a66 !important;
 }
 
+.bg-black {
+    background: #718a66 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
