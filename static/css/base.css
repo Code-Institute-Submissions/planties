@@ -106,7 +106,8 @@ i.fas.fa-shopping-bag.fa-lg{
     border-color: #718a66!important;
 }
 
-a.category-badge > span.badge:hover {
+a.category-badge > span.badge:hover,
+.btn.browse:hover {
     background: #718a66 !important;
     color: #fff !important;
 
@@ -127,6 +128,12 @@ a.category-badge > span.badge:hover {
     color: white;
 }
 
+input.add-bag{
+    border-radius: 50px;
+    background: #718a66;
+    color: white;
+}
+
 .btt-button:hover {
     background: white;
     color: #718a66;
@@ -140,6 +147,18 @@ a.category-badge > span.badge:hover {
 
 .btt-link {
     cursor: pointer;
+}
+
+.btn.browse{
+    border-radius: 50px;
+    background: white;
+    color: #718a66;
+    border: 1px solid #718a66;
+
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
 }
 
 /* -------------------------------- Media Queries */
