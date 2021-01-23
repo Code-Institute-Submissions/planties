@@ -128,7 +128,8 @@ a.category-badge > span.badge:hover,
     color: white;
 }
 
-input.add-bag{
+input.add-bag,
+a.add-bag{
     border-radius: 50px;
     background: #718a66;
     color: white;
