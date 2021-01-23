@@ -146,7 +146,9 @@ a.add-bag{
     -o-transition: all 0.35s ease-in-out;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -160,6 +162,10 @@ a.add-bag{
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
+}
+
+.text-info {
+    color: #718a66!important;
 }
 
 /* -------------------------------- Media Queries */
