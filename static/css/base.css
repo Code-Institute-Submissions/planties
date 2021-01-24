@@ -46,6 +46,7 @@ i.fab.fa-pagelines{
 
 .search{
     border-radius: 50px;
+    background-color: #e6eccc;
 }
 
 i.fas.fa-user.fa-lg,
@@ -75,9 +76,10 @@ i.fas.fa-shopping-bag.fa-lg{
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: white;
+    background: #e6eccc;
     color: #718a66;
     border: 1px solid #718a66;
+    font-weight: 600;
 }
 
 .text-black {
