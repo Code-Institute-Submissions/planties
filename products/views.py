@@ -56,6 +56,9 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
 
+    for product in products:
+        print(product.name, product.rating, type(product.rating))
+
     return render(request, 'products/products.html', context)
 
 
