@@ -35,7 +35,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Ocassions
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
@@ -43,6 +43,16 @@
                 <a href="{% url 'products' %}?category=wedding_bouquets" class="dropdown-item">Wedding Bouquets</a>
                 <a href="{% url 'products' %}?category=christmas" class="dropdown-item">Christmas</a>
                 <a href="{% url 'products' %}?category=valentines_day,wedding_bouquets,christmas" class="dropdown-item">All Specials</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="blog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Blog
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="blog">
+                <a href="{% url 'products' %}?category=posts" class="dropdown-item">Posts</a>
+                <a href="{% url 'products' %}?category=about_us" class="dropdown-item">About Us</a>
             </div>
         </li>
     </ul>

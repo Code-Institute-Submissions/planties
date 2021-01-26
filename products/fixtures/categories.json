@@ -54,5 +54,21 @@
       "name": "christmas",
       "friendly_name": "Christmas"
     }
+  },
+  {
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+      "name": "posts",
+      "friendly_name": "Posts"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.category",
+    "fields": {
+      "name": "about_us",
+      "friendly_name": "About Us"
+    }
   }
 ]
