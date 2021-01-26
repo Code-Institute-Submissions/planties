@@ -171,10 +171,10 @@ button.add-bag{
     color: #718a66!important;
 }
 
-
+/*
 input[type="text"]{
     border-radius: 5px!important;
-}
+}*/
 
 select.border-black.rounded-0.profile-form-input.lazyselect.form-control,
 input.border-black.clearablefileinput.form-control-file{
