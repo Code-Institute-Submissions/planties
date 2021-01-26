@@ -101,7 +101,8 @@ i.fas.fa-shopping-bag.fa-lg{
 	left: 0;
 	position: fixed;
 	background: white;
-	z-index: -1;
+    z-index: -1;
+    background-color: #e6eccc;
 }
 
 .border-dark {
@@ -177,7 +178,8 @@ input[type="text"]{
 }*/
 
 select.border-black.rounded-0.profile-form-input.lazyselect.form-control,
-input.border-black.clearablefileinput.form-control-file{
+input.border-black.clearablefileinput.form-control-file,
+input.border-black.rounded-0.profile-form-input.textinput.textInput.form-control{
     border-radius: 5px!important;
 }
 
