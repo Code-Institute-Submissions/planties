@@ -176,7 +176,8 @@ input[type="text"]{
     border-radius: 5px!important;
 }
 
-select.border-black.rounded-0.profile-form-input.lazyselect.form-control{
+select.border-black.rounded-0.profile-form-input.lazyselect.form-control,
+input.border-black.clearablefileinput.form-control-file{
     border-radius: 5px!important;
 }
 
