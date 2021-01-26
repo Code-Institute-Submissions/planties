@@ -192,12 +192,21 @@
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-black add-bag my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-chevron-circle-left"></i>
+                        </span>
+                        <span class="text-uppercase">Back to Profile</span>
+                    </a>
+                {% else %}
 				<a href="{% url 'products' %}?category=valentines_day,wedding_bouquets,christmas" class="btn btn-black add-bag my-2">
 					<span class="icon mr-2">
 						<i class="fas fa-chevron-circle-left"></i>
 					</span>
 					<span class="text-uppercase">checkout more of our products!</span>
-				</a>
+                </a>
+                {% endif %}
 			</div>
 		</div>
     </div>
