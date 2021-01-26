@@ -179,7 +179,8 @@ input[type="text"]{
 
 select.border-black.rounded-0.profile-form-input.lazyselect.form-control,
 input.border-black.clearablefileinput.form-control-file,
-input.border-black.rounded-0.profile-form-input.textinput.textInput.form-control{
+input.border-black.rounded-0.profile-form-input.textinput.textInput.form-control,
+input.border-black.customclearablefileinput.form-control-file{
     border-radius: 5px!important;
 }
 
@@ -329,6 +330,32 @@ input.border-black.rounded-0.profile-form-input.textinput.textInput.form-control
 .allauth-form-inner-content a {
     color: #718a66;
     font-weight: 600;
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: #718a66;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #718a66;
+    border-color: #718a66;
 }
 
 /* fixed top navbar only on medium and up */
