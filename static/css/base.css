@@ -131,7 +131,8 @@ a.category-badge > span.badge:hover,
 }
 
 input.add-bag,
-a.add-bag{
+a.add-bag,
+button.add-bag{
     border-radius: 50px;
     background: #718a66;
     color: white;
@@ -168,6 +169,19 @@ a.add-bag{
 
 .text-info {
     color: #718a66!important;
+}
+
+
+input[type="text"]{
+    border-radius: 5px!important;
+}
+
+select.border-black.rounded-0.profile-form-input.lazyselect.form-control{
+    border-radius: 5px!important;
+}
+
+.round-5 {
+    border-radius: 5px!important;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -236,6 +250,10 @@ a.add-bag{
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+#id_login{
+    background-color: white!important;
 }
 
 /* -------------------------------- Media Queries */
