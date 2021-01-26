@@ -10,7 +10,7 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    """ shows all the products, sorting and searching """
+    """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
     query = None
@@ -42,7 +42,9 @@ def all_products(request):
             query = request.GET['q']
             if not query:
                 messages.error(
-                    request, "Please enter a product to be searched")
+                    request,
+                    "You didn't enter any search criteria!"
+                    )
                 return redirect(reverse('products'))
 
             queries = Q(
@@ -58,14 +60,11 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
 
-    for product in products:
-        print(product.name, product.rating, type(product.rating))
-
     return render(request, 'products/products.html', context)
 
 
 def product_detail(request, product_id):
-    """ shows product details individually """
+    """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -95,6 +94,33 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_product(request, product_id):
+    """ Edit a product in the store """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.'
+                )
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
     }
 
     return render(request, template, context)
