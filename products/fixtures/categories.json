@@ -56,19 +56,19 @@
     }
   },
   {
-    "pk": 8,
-    "model": "products.category",
-    "fields": {
-      "name": "posts",
-      "friendly_name": "Posts"
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+        "name": "post_list",
+        "friendly_name": "Posts"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+        "name": "about_us",
+        "friendly_name": "About Us"
+        }
     }
-  },
-  {
-    "pk": 9,
-    "model": "products.category",
-    "fields": {
-      "name": "about_us",
-      "friendly_name": "About Us"
-    }
-  }
 ]
