@@ -4,8 +4,8 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">About Us</h2>
+            <div class="col text-center mt-5">
+                <h2 class="logo-font" style="color: white;">About Us</h2>
                 {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'about_us' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -15,11 +15,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <p class="card-text mt-5" style="font-weight: 600;">
-                    We want to capture and convey the moments of joy, surprise and delight that sending and receiving flowers uniquely create.
-                    <br>
-                    We have been spreading smiles in the UK since 2003 and it has always been our mission to ensure that giving and receiving of flowers is as meaningful, special and as memorable as it can be. No matter what the message will be, you can trust that our blooms will express all without uttering a word.
+            <div class="over"></div>
+            <div class="col mt-5 text-center">
+                <p class="card-text about-us">
+                    We want to capture and deliver moments of happiness, surprise and wonder that sending and receiving flowers uniquely create.
+                    We have been spreading smiles for many years and our mission is to always ensure how meaningful, special and memorable giving and receiving flowers is.
+                    Let our flowers speak for you, no matter what the message is.
                 </p>
             </div>
         </div>

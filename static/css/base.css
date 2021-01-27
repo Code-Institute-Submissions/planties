@@ -195,6 +195,23 @@ input.border-black.customclearablefileinput.form-control-file{
     border-radius: 5px!important;
 }
 
+p.card-text.about-us{
+    color: white;
+    letter-spacing: 0.5px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.over{
+    height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+    z-index: -10;
+    background-color: rgba(113, 138, 102, 0.4)!important;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
