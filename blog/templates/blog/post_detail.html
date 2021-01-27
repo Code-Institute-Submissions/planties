@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col text-center mt-5">
                 <h2 class="logo-font">{% block title %} {{ post.title }} {% endblock title %}</h2>
-                <p class=" text-muted">{{ post.created_on }}</p>
+                <p class="text-muted">{{ post.created_on }}</p>
             </div>
             <div class="col-10 col-md-10 col-lg-10 offset-1 mt-5">
                 <div class="card-body">
@@ -24,18 +24,23 @@
 
                 <!-- comments -->
 
-                <div class="col-md-8 card mb-4  mt-3 ">
+                <div class="col-md-8 card mb-4 mt-5 border-black">
                     <div class="card-body">
-                        <h3>{{ comments.count }} comment(s)</h3>
-                        {% for comment in comments %}
-                        <div class="comments" style="padding: 10px;">
-                        <p class="font-weight-bold">
-                            {{ comment.name }}
-                            <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            <span class="medium" style="font-weight: 600; letter-spacing: 0.5px;">
+                                {{ comments.count }} comment(s)
                             </span>
                         </p>
-                        {{ comment.body | linebreaks }}
+                        {% for comment in comments %}
+                        <div class="comments mt-5">
+                            <p class="font-weight-bold">
+                                {{ comment.name }}
+                                <br>
+                                <span class="small text-muted mt-5">
+                                    {{ comment.created_on }}
+                                </span>
+                            </p>
+                        <strong>{{ comment.body | linebreaks }}</strong>
                         </div>
                         {% endfor %}
                     </div>
@@ -51,7 +56,7 @@
                             <form method="post" style="margin-top: 1.3em;">
                             {{ comment_form.as_p }}
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                             </form>
                         {% endif %}
                     </div>
