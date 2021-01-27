@@ -13,28 +13,11 @@
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container my-5">
-                    {% if product.image %}
-                        <a href="{{ post.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
-                        </a>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 card mb-4  mt-3 left  top">
-                    <div class="card-body">
-                        <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
-                        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-                        <p class="card-text ">{{ post.description | safe }}</p>
-                    </div>
-                    </div>
+            <div class="col-12 col-md-6 col-lg-12 mb-4 mt-3">
+                <div class="card-body">
+                    <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+                    <p class=" text-muted">{{ post.created_on }}</p>
+                    <p class="card-text ">{{ post.content }}</p>
                 </div>
             </div>
         </div>

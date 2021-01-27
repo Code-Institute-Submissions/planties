@@ -33,7 +33,7 @@ def posts(request):
     return render(request, 'blog/posts.html', context)
 
 
-def post_detail(request, slug):
+def PostDetail(request, slug):
     """ A view to show individual post details """
 
     post = get_object_or_404(Post, slug=slug)
@@ -42,4 +42,4 @@ def post_detail(request, slug):
         'post': post,
     }
 
-    return render(request, 'posts/post_detail.html', context)
+    return render(request, 'blog/post_detail.html', context)
