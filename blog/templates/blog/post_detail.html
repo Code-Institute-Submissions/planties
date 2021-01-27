@@ -45,7 +45,7 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="col-md-8 card mb-4  mt-3 ">
+                <div class="col-md-8 card mb-4 mt-3 border-black">
                     <div class="card-body">
                         {% if new_comment %}
                             <div class="alert alert-success" role="alert">
@@ -56,9 +56,15 @@
                             <form method="post" style="margin-top: 1.3em;">
                             {{ comment_form.as_p }}
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            <button type="submit" class="btn btn-black add-bag my-2">Submit</button>
                             </form>
                         {% endif %}
+                        <a href="{% url 'posts' %}?category={{ c.name }}" class="btn btn-black browse my-2">
+                            <span class="icon mr-2">
+                                <i class="fas fa-chevron-circle-left"></i>
+                            </span>
+                            <span class="text-uppercase">checkout more posts!</span>
+                        </a>
                     </div>
                 </div>
             </div>
