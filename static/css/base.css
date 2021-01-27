@@ -137,7 +137,14 @@ button.add-bag{
     border-radius: 50px;
     background: #718a66;
     color: white;
+
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
 }
+
+
 
 .btt-button:hover {
     background: white;
