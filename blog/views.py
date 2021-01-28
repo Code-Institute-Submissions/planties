@@ -1,7 +1,9 @@
 from .models import Post
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models.functions import Lower
 from .forms import CommentForm
+from django.contrib import messages
+from .forms import PostForm
 
 
 def posts(request):
@@ -63,3 +65,33 @@ def PostDetail(request, slug):
     }
 
     return render(request, 'blog/post_detail.html', context)
+
+
+def edit_post(request, slug):
+    """ Edit a post in the blog """
+    if not request.user.is_superuser:
+        messages.error(request, 'Forbidden! Only the Admin can do that.')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Post, slug=slug)
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated post!')
+            return redirect(reverse('post_detail', args=[slug]))
+        else:
+            messages.error(
+                request,
+                'Failed to update post. Please ensure the form is valid.'
+                )
+    else:
+        form = PostForm(instance=post)
+        messages.info(request, f'You are editing {post.title}')
+
+    context = {
+        'form': form,
+        'post': post,
+    }
+
+    return render(request, 'blog/edit_post.html', context)
