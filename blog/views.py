@@ -79,7 +79,7 @@ def add_post(request):
         if form.is_valid():
             user = User.objects.get(username=request.user.username)
             form.instance.author = user
-            form.save()
+            post = form.save()
             messages.success(request, 'Successfully added post!')
             return redirect(reverse('post_detail', args=[post.slug]))
         else:
