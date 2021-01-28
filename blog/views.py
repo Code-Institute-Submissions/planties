@@ -125,3 +125,15 @@ def edit_post(request, slug):
     }
 
     return render(request, 'blog/edit_post.html', context)
+
+
+def delete_post(request, slug):
+    """ delete a post in the blog """
+    if not request.user.is_superuser:
+        messages.error(request, 'Forbidden! Only the Admin can do that.')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Post, slug=slug)
+    post.delete()
+    messages.success(request, 'Successfully deleted post!')
+    return redirect(reverse('posts'))

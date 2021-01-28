@@ -60,8 +60,8 @@
                                 <div class="col">
                                     {% if request.user.is_superuser %}
                                         <small>
-                                            <a href="">Edit</a> | 
-                                            <a class="text-danger confirm-delete" href="">Delete</a>
+                                            <a href="{% url 'edit_post' post.slug %}">Edit</a> | 
+                                            <a class="text-danger confirm-delete" href="{% url 'delete_post' post.slug %}">Delete</a>
                                         </small>
                                     {% endif %}
                                 </div>
