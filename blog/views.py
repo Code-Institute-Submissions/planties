@@ -4,6 +4,7 @@ from django.db.models.functions import Lower
 from .forms import CommentForm
 from django.contrib import messages
 from .forms import PostForm
+from django.contrib.auth.models import User
 
 
 def posts(request):
@@ -36,7 +37,7 @@ def posts(request):
     return render(request, 'blog/posts.html', context)
 
 
-def PostDetail(request, slug):
+def post_detail(request, slug):
     """ A view to show individual post details """
 
     post = get_object_or_404(Post, slug=slug)
@@ -65,6 +66,35 @@ def PostDetail(request, slug):
     }
 
     return render(request, 'blog/post_detail.html', context)
+
+
+def add_post(request):
+    """ add a post in the blog """
+    if not request.user.is_superuser:
+        messages.error(request, 'Forbidden! Only the Admin can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            user = User.objects.get(username=request.user.username)
+            form.instance.author = user
+            form.save()
+            messages.success(request, 'Successfully added post!')
+            return redirect(reverse('post_detail', args=[post.slug]))
+        else:
+            messages.error(
+                request,
+                'Failed to add post. Please ensure the form is valid.'
+                )
+    else:
+        form = PostForm()
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'blog/add_post.html', context)
 
 
 def edit_post(request, slug):

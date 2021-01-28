@@ -25,9 +25,7 @@
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'add_post' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {% form.as_p %}
-                        {{ field }}
-                    {% endform %}
+                    {{form|crispy}}
                     <div class="text-right">
                         <a class="btn btn-outline-black browse" href="{% url 'posts' %}">Cancel</a>
                         <button class="btn btn-black add-bag" type="submit">Add Post</button>
