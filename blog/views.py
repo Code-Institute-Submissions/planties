@@ -1,4 +1,4 @@
-from .models import Post
+from .models import Post, Comment
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models.functions import Lower
 from .forms import CommentForm
@@ -137,3 +137,16 @@ def delete_post(request, slug):
     post.delete()
     messages.success(request, 'Successfully deleted post!')
     return redirect(reverse('posts'))
+
+
+def delete_comment(request, slug, comment_id):
+    """ delete comments if super.user """
+    if not request.user.is_superuser:
+        messages.error(request, 'Forbidden! Only the Admin can do that.')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Post, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
+    comment.delete()
+    messages.success(request, 'Comment successfully deleted!')
+    return redirect(reverse('post_detail', args=[slug]))
