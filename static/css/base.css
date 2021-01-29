@@ -440,7 +440,7 @@ p.card-text.about-us{
     input.btn.btn-black.add-bag.text-uppercase.mt-5,
     a.btn.browse.btn-lg,
     a.btn.btn-black.add-bag.btn-lg {
-        padding: .375rem .375rem;
+        margin-bottom: 10px;
         font-size: .75rem;
     }
 
