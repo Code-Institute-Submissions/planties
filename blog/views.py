@@ -5,6 +5,7 @@ from .forms import CommentForm
 from django.contrib import messages
 from .forms import PostForm
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 
 def posts(request):
@@ -68,6 +69,7 @@ def post_detail(request, slug):
     return render(request, 'blog/post_detail.html', context)
 
 
+@login_required
 def add_post(request):
     """ add a post in the blog """
     if not request.user.is_superuser:
@@ -97,6 +99,7 @@ def add_post(request):
     return render(request, 'blog/add_post.html', context)
 
 
+@login_required
 def edit_post(request, slug):
     """ Edit a post in the blog """
     if not request.user.is_superuser:
@@ -127,6 +130,7 @@ def edit_post(request, slug):
     return render(request, 'blog/edit_post.html', context)
 
 
+@login_required
 def delete_post(request, slug):
     """ delete a post in the blog """
     if not request.user.is_superuser:
@@ -139,6 +143,7 @@ def delete_post(request, slug):
     return redirect(reverse('posts'))
 
 
+@login_required
 def delete_comment(request, slug, comment_id):
     """ delete comments if super.user """
     if not request.user.is_superuser:
