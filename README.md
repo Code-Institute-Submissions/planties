@@ -350,3 +350,34 @@ git push heroku master
 16. In Heroku, go to the Deploy tab and connect your app to your GitHub repository and **Enable Automatic Deployment** as the deployment method to automatically push the changes to Heroku from Github.
 
 17. Your site would now be deployed to Heroku.
+
+
+# Credits
+
+### Content
+
+- This project was developed refering to the Boutique Ado Django mini-project from **Code Institute** course materials.
+The codes are customized and modified to fit the purpose of this milestone project.
+
+- For the **Blog** app, I referred to this website [The Start Up](https://medium.com/swlh/build-your-own-blog-with-django-part-1-e5715b7cd9bc).
+
+- The posts and comments use **slugs** which is not taught in the course and tutors are not familiar with, so I got a bit more intel by comparing it with the code from the website [Django Girls](https://tutorial.djangogirls.org/en/django_forms/) and [Alex Garrett](https://www.alexgarrett.tech/blog/article/compose-edit-and-publish/).
+
+
+### Media
+
+The photos used in this website were obtained from [Unsplash](https://unsplash.com/).
+
+
+### Acknowledgements
+
+I received inspiration for this project from:
+
+- [Code Institute](https://codeinstitute.net/)
+- [Behance](https://www.behance.net/)
+- [ww3Schools](https://www.w3schools.com/)
+- [Stack Overflow](https://stackoverflow.com/)
+
+
+###### Disclaimer: This project was created for educational use only as part of the Code Institute Full Stack Software Development Course</i>
+
