@@ -167,6 +167,7 @@ I used [Balsamiq](https://balsamiq.com/) to build the wireframes, so you might n
 - Depending on the function that the User or the Admin perform, a message will appear on the top left corner of the screen.
 - A pop up windown will appear in case the Admin decides to remove something, to avoid removing things by accident.
 - After checking out, user get an email with their order details.
+- If a user writes "/add", "edit" or "delete" in the end of the link, a pop up message will appear stating that only the super user is allowed to access that page.
 
 ## Features Left to Implement
 
@@ -226,7 +227,8 @@ There are some long line that I couldn't figure out how to me more PEP8 friendly
 I did a detailed testing on each page and updated the results using an Excel as you can see below.
 You can also see it in the **assets** folder.
 
-
+![GitHub Logo](/assets/readme-files/planties-1.jpg)
+![GitHub Logo](/assets/readme-files/planties-2.jpg)
 
 # Observations
 
@@ -236,6 +238,7 @@ You can also see it in the **assets** folder.
 
 - Not all code is PEP8 friendly, mostly because the lines were too long and I wans't sure how to fix them.
 
+- The website was made in less than two weeks because I chose to go with [WhiteNoise](http://whitenoise.evans.io/en/stable/) instead of AWS and it wasn't deploying to Heroku properly, so I had to start over.
 
 # Deployment
 
