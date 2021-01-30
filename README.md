@@ -220,6 +220,14 @@ I used [Balsamiq](https://balsamiq.com/) to build the wireframes, so you might n
 
 # Testing
 
+All the links have been manually tested.
+Tested if there are any problems in the coding or code styling from the Problems tab in Gitpod.
+There are some long line that I couldn't figure out how to me more PEP8 friendly. 
+I did a detailed testing on each page and updated the results using an Excel as you can see below.
+You can also see it in the **assets** folder.
+
+
+
 # Observations
 
 - The website has been checked for responsiveness on a multitude of screen sizes from PC to portable devices, such as tablets and mobile phones.
