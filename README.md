@@ -121,7 +121,7 @@ In the event that they have made any past purchases, that information is automat
 
 ## Skeleton
 
-You'll be able to view the sketches, wireframes, and mockups for this project in the **assets** folder in the [Github project repository](https://github.com/gaspar91/planties).
+You'll be able to view the wireframes for this project in the **assets** folder in the [Github project repository](https://github.com/gaspar91/planties).
 
 I used [Balsamiq](https://balsamiq.com/) to build the wireframes, so you might need the program in order to view some of the documents.
 
